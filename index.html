@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#24140f"><title>Choco Bliss | Chocolate Shop</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-mark">C</span><span>CHOCO <b>BLISS</b><small>HANDCRAFTED CHOCOLATE</small></span></a><nav><a href="#products">สินค้า</a><a href="#story">เรื่องราวของเรา</a><a href="#contact">ติดต่อ</a></nav><button class="cart-button" id="openCart">ตะกร้า <span id="cartCount">0</span></button></header>
+<main>
+<section class="hero"><div class="hero-copy"><p class="eyebrow">A LITTLE MOMENT OF HAPPINESS</p><h1>ความสุขชิ้นเล็ก<br>ที่ละลายในใจ</h1><p>ช็อกโกแลตคัดสรรวัตถุดิบคุณภาพ รสชาติเข้มข้น เหมาะสำหรับเติมความสุขในทุกวัน</p><a class="primary-link" href="#products">เลือกช็อกโกแลตของคุณ <span>→</span></a></div><div class="hero-art"><div class="sun"></div><div class="hero-bar"><span>CHOCO<br>BLISS</span></div><div class="hero-caption">MADE WITH LOVE · 100% JOY</div></div></section>
+<section class="products section" id="products"><div class="section-heading"><div><p class="eyebrow">OUR COLLECTION</p><h2>เลือกความอร่อยของคุณ</h2></div><p>ทุกแท่งผลิตด้วยความใส่ใจ<br>เพื่อช่วงเวลาพิเศษของคุณ</p></div><div class="product-grid" id="productGrid"></div></section>
+<section class="story section" id="story"><div class="story-icon">✦</div><div><p class="eyebrow">OUR PROMISE</p><h2>เรียบง่าย แต่พิเศษในทุกคำ</h2><p>เราเชื่อว่าช็อกโกแลตที่ดีไม่ใช่แค่ขนม แต่คือช่วงเวลาที่ทำให้วันธรรมดากลายเป็นวันที่พิเศษ คัดสรรรสชาติและบรรจุอย่างพิถีพิถันก่อนส่งถึงมือคุณ</p></div></section>
+<section class="contact section" id="contact"><p class="eyebrow">NEED A LITTLE HELP?</p><h2>พร้อมส่งความสุขถึงคุณ</h2><p>กรอกข้อมูลจัดส่งในขั้นตอนสั่งซื้อ เราจะเตรียมสินค้าและจัดส่งให้อย่างดีที่สุด</p></section>
+</main>
+<footer><span>© 2026 CHOCO BLISS</span><span>HANDCRAFTED WITH ♥</span></footer>
+<div class="overlay" id="cartOverlay"><aside class="drawer"><div class="drawer-head"><h2>ตะกร้าสินค้า</h2><button class="icon-button" id="closeCart">✕</button></div><div id="cartItems" class="cart-items"></div><div class="cart-total"><span>ยอดรวม</span><strong id="cartTotal">฿0</strong></div><button class="primary-button full" id="checkoutBtn">ดำเนินการสั่งซื้อ</button></aside></div>
+<div class="overlay" id="checkoutOverlay"><section class="checkout modal"><div class="drawer-head"><h2>ข้อมูลจัดส่ง</h2><button class="icon-button" id="closeCheckout">✕</button></div><form id="checkoutForm">
+<label>ชื่อ-นามสกุลผู้รับ<input name="customerName" required placeholder="ชื่อผู้รับ"></label><label>เบอร์โทรศัพท์<input name="phone" required inputmode="tel" pattern="[0-9+() -]{9,20}" placeholder="08X-XXX-XXXX"></label><label>ที่อยู่จัดส่ง<textarea name="address" required rows="3" placeholder="บ้านเลขที่ ถนน แขวง/ตำบล เขต/อำเภอ จังหวัด"></textarea></label><div class="two-col"><label>รหัสไปรษณีย์<input name="postcode" required inputmode="numeric" pattern="[0-9]{5}" placeholder="10XXX"></label><label>หมายเหตุ<input name="note" placeholder="ถ้ามี"></label></div><div class="checkout-summary"><span>ยอดชำระ</span><b id="checkoutTotal">฿0</b></div><button class="primary-button full" type="submit" id="submitOrder">ยืนยันคำสั่งซื้อ</button><p class="fine-print">เมื่อยืนยัน ระบบจะบันทึกคำสั่งซื้อใน Google Sheets</p></form></section></div>
+<div class="toast" id="toast" role="status"></div>
+<script src="config.js"></script><script src="app.js"></script>
+</body></html>
